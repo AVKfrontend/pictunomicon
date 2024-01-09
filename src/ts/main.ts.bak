@@ -1,0 +1,21 @@
+
+// TypeScript cod here
+
+/// <reference path="../js/SimpleImage.js" />
+
+const loadInput:HTMLInputElement = document.getElementById('load');
+const canvas:HTMLCanvasElement = document.getElementById('can');
+let originUploadedImg;
+loadInput.addEventListener("change", updateImage);
+
+function updateImage() {
+	if(!loadInput) {
+		console.log("Файл не вибран");
+		return;
+	}
+	originUploadedImg = new SimpleImage(loadInput);
+	printImg(originUploadedImg);
+}
+function printImg(img: SimpleImage) {
+	img.drawTo(canvas);
+}
