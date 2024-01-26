@@ -39,7 +39,16 @@ body {
 	&__controls {
 		width: 600px;
 	}
-	&__grey {
+	&__wrupper {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(auto, 1fr));
+		gap: 10px;
+	}
+	&__grey, &__red, &__green, &__sepia, &__clear {
 		@extend %button;
+	}
+	&__clear {
+		display: block;
+		margin: 20px auto 0;
 	}
 }

@@ -1,8 +1,17 @@
+@use 'variables' as *;
 %button {
 	padding: 10px;
 	background-color: coral;
-	border: 1px solid #808080;
+	border: 1px solid; /*#808080*/
 	border-radius: 15px;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 3px 3px 0 3px;
+	&:hover {
+		background-color: $hovercolor;
+		&:active {
+			box-shadow: inset 3px 3px 0 3px;
+		}
+	}
 }
 %flex_oll_center {
 	display: flex;
